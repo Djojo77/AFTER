@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/canvas.css">
+    <script src="js/jQuery/jquery-3.3.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <!--<img src="assets/ai.jpg" id="fixed_bg">-->
+
+    <header class="mainHeader">
+        <nav class="navbar">
+            <img id="logo" src="assets/afterAlpha.png" alt="AFTER_logo">
+            <div class="searchbarContainer">
+                <div class="searchbar">
+                    <div class="w-100">
+                        <input type="text" placeholder="Your Research" id="searchBarInput">
+                        <div id="autocomplete" class="transition hide"></div>
+                    </div>
+                    <button id="search" alt="Search">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mainContent">
+        <div class="map transition">
+            <img src="assets/celio_74.png" id="celio_canvas" class="canvas" name="celio">
+            <img src="assets/zara.png" id="zara_canvas" class="canvas" name="zara">
+            <img src="assets/middle_ovale.png" id="resto_canvas" class="canvas" name="resto">
+            <img src="assets/carrefour.png" id="carrefour_canvas" class="canvas" name="carrefour">
+        </div>
+        <div class="info hide transition">
+            <div class="container transition">
+                <header class="margin-b-50">
+                    <h2>Name</h2>
+                    <h2 class="right" style="top: -60px; position: relative;">LOGO</h2>
+                </header>
+                <div class="content">
+                    <h4 class="margin-b-20">Description</h4>
+                    <ul>
+                        <li><strong>Monday : </strong>opening time</li>
+                        <li><strong>Tuesday : </strong>opening time</li>
+                        <li><strong>Wednesday : </strong>opening time</li>
+                        <li><strong>Thursday : </strong>opening time</li>
+                        <li><strong>Friday : </strong>opening time</li>
+                        <li><strong>Saturday : </strong>opening time</li>
+                        <li><strong>Sunday : </strong>opening time</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <img src="assets/alphaBlack.png" alt="click it ;)" id="smallLogo" data-target="modalCat">
+
+        <div id="modalCat" class="modal hide transition">
+
+            <!-- CLOTHES LIST-->
+            <div id="clothesList" class="catLists hide transition">
+                <header>
+                    <div class="left title">
+                        <img src="assets/shirt.png" alt="">
+                        <h4>CLOTHING</h4>
+                    </div>
+                    <div class="right"><button class="buttonBack" data-target="clothesList">Back</button></div>
+                </header>
+                <ul>
+                    <li><img class="listIcon" src="assets/zara_logo.png" data-target="celio_canvas" data-value="Zara"></li>
+                    <li><img class="listIcon" src="assets/celio_logo.png" data-target="" data-value="Celio"></li>
+                </ul>
+            </div>
+            <!-- END CLOTHES LIST-->
+
+            <!-- RESTAURANTS LIST-->
+            <div id="restoList" class="catLists hide transition">
+                <header>
+                    <div class="left title">
+                        <img src="assets/resto.png" alt="">
+                        <h4>Restaurants</h4>
+                    </div>
+                    <div class="right"><button class="buttonBack" data-target="clothesList">Back</button></div>
+                </header>
+                <ul>
+                    <li><img class="listIcon" src="assets/resto_logo.png" data-target="resto_canvas" data-value="resto"></li>
+                </ul>
+            </div>
+            <!-- END RESTAURANTS LIST-->
+
+            <!-- SUPERMARKETS LIST-->
+            <div id="SMList" class="catLists hide transition">
+                <header>
+                    <div class="left title">
+                        <img src="assets/resto.png" alt="">
+                        <h4>Super-Markets</h4>
+                    </div>
+                    <div class="right"><button class="buttonBack" data-target="clothesList">Back</button></div>
+                </header>
+                <ul>
+                    <li><img class="listIcon" src="assets/cart.png" data-target="carrefour_canvas" data-value="carrefour"></li>
+                </ul>
+            </div>
+            <!-- END SUPERMARKETS LIST-->
+
+            <ul class="categorie">
+                <li class="catIcon" data-target="clothesList">
+                    <img src="assets/shirt.png" alt="" id="clothesIcon">
+                    <h5>CLOTHING</h5>
+                </li>
+
+                <li class="catIcon" data-target="restoList">
+                    <img src="assets/resto.png" alt="" id="RestoIcon">
+                    <h5>RESTAURANTS</h5>
+                </li>
+
+                <li class="catIcon" data-target="SMList">
+                    <img src="assets/cart.png" alt="" id="SMIcon">
+                    <h5>SUPER-MARKETS</h5>
+                </li>
+            </ul>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

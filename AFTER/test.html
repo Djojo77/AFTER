@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="test" type="text">
+    <div id="autocomplete"></div>
+
+
+    <script>
+        // let tab = ['zara', 'celio', 'resto', 'carrefour'];
+        let input = document.getElementById('test');
+        let auto = document.getElementById('autocomplete');
+
+        function test(input) {
+            let arr = ['zara', 'celio', 'resto', 'carrefour'];
+            auto.innerText = '';
+            if (input !== '') {
+                for (let i = arr.length - 1; i >= 0; i--) {
+                    for (let j = 0; j < input.length; j++) {
+                        if (input[j] !== arr[i][j]) {
+                            arr.splice(i, 1);
+                            break;
+                        }
+                    }
+                }
+                console.log(arr);
+                for (let cnt = 0; cnt < arr.length; cnt++) {
+                    auto.innerHTML += '<p>' + arr[cnt] + '</p>';
+                }
+            }
+        }
+
+        input.onkeyup = function() { test(input.value); };
+
+    </script>
+</body>
+</html>

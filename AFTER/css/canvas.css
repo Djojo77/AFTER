@@ -1,0 +1,24 @@
+.canvas {
+  position: absolute;
+  opacity: 0; }
+  .canvas:hover, .canvas.active {
+    opacity: 1;
+    visibility: visible; }
+
+#celio_canvas {
+  margin-left: 494px;
+  margin-top: 426px; }
+
+#zara_canvas {
+  margin-left: 109px;
+  margin-top: 449px; }
+
+#resto_canvas {
+  margin-left: 328px;
+  margin-top: 69px; }
+
+#carrefour_canvas {
+  margin-left: 494px;
+  margin-top: 265px; }
+
+/*# sourceMappingURL=canvas.css.map */
